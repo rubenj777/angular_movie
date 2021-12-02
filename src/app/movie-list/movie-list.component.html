@@ -1,0 +1,8 @@
+<div class="list">
+  <div *ngFor="let m of tabMovie">
+    <app-display-movie
+      [movie]="m"
+      (deleteMovie)="delete(m)"
+    ></app-display-movie>
+  </div>
+</div>

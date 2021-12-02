@@ -1,0 +1,40 @@
+#movie {
+  position: relative;
+  width: 450px;
+  height: 250px;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(150, 150, 190);
+  border-radius: 8px;
+  display: block;
+  #super {
+    h2 {
+      display: inline;
+      margin: 0;
+    }
+    display: flex;
+  }
+  #info {
+    display: flex;
+    align-items: center;
+    img {
+      width: 118px;
+      height: 151px;
+      margin: 10px 10px 0px 0px;
+    }
+    ul {
+      list-style: none;
+      margin-left: 15px;
+      li {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  button {
+    margin-top: 10px;
+    width: 50px;
+    height: 25px;
+  }
+}

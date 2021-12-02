@@ -1,0 +1,18 @@
+<div id="movie">
+  <div id="super ">
+    <h2>
+      {{ movie.name }}
+    </h2>
+    <button (click)="delete()">Delete</button>
+  </div>
+
+  <div id="info">
+    <img src="{{ movie.img }}" alt="movie poster" />
+    <ul>
+      <li>Year : {{ movie.year }}</li>
+      <li>Genre : {{ movie.genres }}</li>
+      <li>Director : {{ movie.director }}</li>
+      <li>Duration : {{ movie.duration }} mn</li>
+    </ul>
+  </div>
+</div>
