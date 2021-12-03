@@ -9,11 +9,16 @@ import { Movie } from '../models/movie';
 export class DisplayMovieComponent implements OnInit {
   @Input() public movie!: Movie;
   @Output() deleteMovie = new EventEmitter<void>();
+  @Output() editMovie = new EventEmitter<void>();
 
   constructor() {}
 
   delete() {
     this.deleteMovie.emit();
+  }
+
+  edit() {
+    this.editMovie.emit();
   }
 
   ngOnInit(): void {}

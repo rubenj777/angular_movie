@@ -21,7 +21,7 @@ export class MovieService {
     let shining = new Movie(
       'Shining',
       '1980',
-      ['Horror'],
+      ['Horror', 'Snow'],
       'Stanley Kubrick',
       119,
       new URL('https://m.media-amazon.com/images/I/51Ofa1gRbmL._AC_.jpg')
@@ -37,5 +37,30 @@ export class MovieService {
       )
     );
     this.tabMovie.push(fullMetalJacket, shining, spaceOdyssey);
+  }
+
+  addMovie(
+    name: string,
+    year: string,
+    genres: string[],
+    director: string,
+    duration: number,
+    img: URL
+  ) {
+    const movieObject = {
+      name,
+      year,
+      genres,
+      director,
+      duration,
+      img,
+    };
+    movieObject.name = name;
+    movieObject.year = year;
+    movieObject.genres = genres;
+    movieObject.director = director;
+    movieObject.duration = duration;
+    movieObject.img = img;
+    this.tabMovie.push(movieObject);
   }
 }

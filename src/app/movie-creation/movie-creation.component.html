@@ -1,3 +1,50 @@
-<div class="form">
-  <app-movie-form></app-movie-form>
-</div>
+<h2>Add a movie !</h2>
+<form (ngSubmit)="submit(form)" #form="ngForm">
+  <input
+    placeholder="movie name"
+    type="text"
+    [(ngModel)]="name"
+    name="name"
+    required
+  />
+  <input
+    placeholder="year"
+    type="text"
+    [(ngModel)]="year"
+    name="year"
+    required
+  />
+  <div id="genre">
+    <input
+      placeholder="movie genre"
+      type="text"
+      [(ngModel)]="genres"
+      name="genres"
+      required
+    />
+    <input type="button" value="add genre" />
+  </div>
+  <input
+    placeholder="director"
+    type="text"
+    [(ngModel)]="director"
+    name="director"
+    required
+  />
+  <input
+    placeholder="duration"
+    type="text"
+    [(ngModel)]="duration"
+    name="duration"
+    required
+  />
+  <input
+    placeholder="image"
+    type="url"
+    [(ngModel)]="image"
+    name="image"
+    required
+  />
+
+  <input type="submit" value="Submit" [disabled]="!form.valid" />
+</form>

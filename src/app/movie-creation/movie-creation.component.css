@@ -1,0 +1,38 @@
+h2 {
+  margin: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 25px;
+}
+
+form #genre {
+  display: flex;
+}
+
+form #genre input[type="button"] {
+  width: 100%;
+}
+
+form input {
+  margin: 5px;
+  height: 25px;
+}
+
+form input[type="submit"] {
+  width: 100px;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid #42a948;
+  /* green */
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+  /* red */
+}

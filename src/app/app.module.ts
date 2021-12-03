@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieCreationComponent } from './movie-creation/movie-creation.component';
 import { DisplayMovieComponent } from './display-movie/display-movie.component';
-import { MovieFormComponent } from './movie-form/movie-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { MovieFormComponent } from './movie-form/movie-form.component';
     MovieListComponent,
     MovieCreationComponent,
     DisplayMovieComponent,
-    MovieFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
