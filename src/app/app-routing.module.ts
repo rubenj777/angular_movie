@@ -7,6 +7,7 @@ import { MovieCreationComponent } from './movie-creation/movie-creation.componen
 const routes: Routes = [
   { path: 'movie-list', component: MovieListComponent },
   { path: 'movie-creation', component: MovieCreationComponent },
+  { path: 'movie-creation/:idMovie', component: MovieCreationComponent },
   { path: '**', redirectTo: 'movie-list' },
 ];
 

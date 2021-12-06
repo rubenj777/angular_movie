@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Movie } from '../models/movie';
 
 @Component({
@@ -11,14 +12,14 @@ export class DisplayMovieComponent implements OnInit {
   @Output() deleteMovie = new EventEmitter<void>();
   @Output() editMovie = new EventEmitter<void>();
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   delete() {
     this.deleteMovie.emit();
   }
 
   edit() {
-    this.editMovie.emit();
+    this.router.navigate(['/movie-creation', this.movie.id]);
   }
 
   ngOnInit(): void {}

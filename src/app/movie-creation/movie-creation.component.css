@@ -13,10 +13,6 @@ form #genre {
   display: flex;
 }
 
-form #genre input[type="button"] {
-  width: 100%;
-}
-
 form input {
   margin: 5px;
   height: 25px;
@@ -24,6 +20,10 @@ form input {
 
 form input[type="submit"] {
   width: 100px;
+}
+
+form input[type="button"] {
+  width: 100%;
 }
 
 .ng-valid[required],

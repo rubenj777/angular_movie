@@ -18,11 +18,16 @@
     <input
       placeholder="movie genre"
       type="text"
-      [(ngModel)]="genres"
+      [(ngModel)]="newGenre"
       name="genres"
       required
     />
-    <input type="button" value="add genre" />
+    <input type="button" value="add genre" (click)="addGenre()" />
+    <p>Genres already added :</p>
+    <ul>
+      <li *ngFor="let g of newGenre">{{ g }}</li>
+    </ul>
+    <input type="button" (click)="flushGenres()" value="Re init list" />
   </div>
   <input
     placeholder="director"
@@ -46,5 +51,9 @@
     required
   />
 
-  <input type="submit" value="Submit" [disabled]="!form.valid" />
+  <input
+    type="submit"
+    [disabled]="!form.valid"
+    [value]="editMode ? 'Edit' : 'Submit'"
+  />
 </form>
