@@ -11,19 +11,13 @@ import { Router } from '@angular/router';
 export class MovieListComponent implements OnInit {
   tabMovie: Movie[] = [];
 
-  constructor(public singletonMovie: MovieService, private router: Router) {
+  constructor(public singletonMovie: MovieService) {
     this.tabMovie = this.singletonMovie.tabMovie;
   }
 
   delete(movie: Movie) {
     let index = this.tabMovie.indexOf(movie);
     this.tabMovie.splice(index, 1);
-  }
-
-  edit(movie: Movie) {
-    this.router.navigate(['movie-creation']);
-    console.log('click');
-    let index = this.tabMovie.indexOf(movie);
   }
 
   ngOnInit(): void {}

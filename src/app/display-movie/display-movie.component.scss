@@ -23,7 +23,10 @@
       height: 151px;
       margin: 10px 10px 0px 0px;
     }
-    ul {
+    #genres {
+      margin-left: 15px;
+    }
+    ul:not(#genres) {
       list-style: none;
       margin-left: 15px;
       li {

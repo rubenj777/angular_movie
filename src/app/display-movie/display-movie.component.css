@@ -30,12 +30,16 @@
   margin: 10px 10px 0px 0px;
 }
 
-#movie #info ul {
+#movie #info #genres {
+  margin-left: 15px;
+}
+
+#movie #info ul:not(#genres) {
   list-style: none;
   margin-left: 15px;
 }
 
-#movie #info ul li {
+#movie #info ul:not(#genres) li {
   margin-top: 5px;
 }
 

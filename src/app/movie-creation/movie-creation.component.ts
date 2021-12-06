@@ -11,27 +11,28 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MovieCreationComponent implements OnInit {
   public name!: string;
-  public year!: string;
+  public year!: number;
   public newGenre!: string;
   public listGenres: string[] = [];
   public director!: string;
-  public duration!: string;
+  public duration!: number;
   public image!: URL;
   public editMode = false;
   public editedMovie: Movie;
 
   constructor(
-    private movieService: MovieService,
+    private singletonMovie: MovieService,
     private route: ActivatedRoute,
     private router: Router
   ) {
     let id = route.snapshot.paramMap.get('id');
-    this.editedMovie = this.movieService.tabMovie.find((f) => f.id === id)!;
+
+    this.editedMovie = this.singletonMovie.tabMovie.find((f) => f.id === id)!;
 
     if (this.editedMovie) {
       this.name = this.editedMovie.name;
       this.year = this.editedMovie.year;
-      this.newGenre = this.editedMovie.newGenre;
+      this.listGenres = this.editedMovie.genres;
       this.director = this.editedMovie.director;
       this.duration = this.editedMovie.duration;
       this.image = this.editedMovie.img;
@@ -58,24 +59,25 @@ export class MovieCreationComponent implements OnInit {
       this.name + Math.random(),
       this.name,
       this.year,
-      this.newGenre,
+      [...this.listGenres],
       this.director,
       this.duration,
       this.image
     );
-    this.movieService.tabMovie.push(newMovie);
+    this.singletonMovie.tabMovie.push(newMovie);
   }
 
   edit() {
     this.editedMovie.name = this.name;
     this.editedMovie.year = this.year;
-    this.editedMovie.listGenres = [...this.listGenres];
+    this.editedMovie.genres = [...this.listGenres];
     this.editedMovie.director = this.director;
     this.editedMovie.duration = this.duration;
     this.editedMovie.img = this.image;
   }
 
   addGenre() {
+    console.log(this.listGenres);
     this.listGenres.push(this.newGenre);
   }
 

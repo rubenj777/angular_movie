@@ -11,7 +11,10 @@
     <img src="{{ movie.img }}" alt="movie poster" />
     <ul>
       <li>Year : {{ movie.year }}</li>
-      <li>Genre : {{ movie.newGenre }}</li>
+      <p>Genres :</p>
+      <ul id="genres">
+        <li *ngFor="let g of movie.genres">{{ g }}</li>
+      </ul>
       <li>Director : {{ movie.director }}</li>
       <li>Duration : {{ movie.duration }} mn</li>
     </ul>

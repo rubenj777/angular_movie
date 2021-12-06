@@ -1,26 +1,25 @@
 export class Movie {
   public id: string;
   public name: string;
-  public year: string;
-  public newGenre: string;
-  public listGenres: string[] = [];
+  public year: number;
+  public genres: string[];
   public director: string;
-  public duration: string;
+  public duration: number;
   public img: URL;
 
   constructor(
     aId: string,
     aName: string,
-    aYear: string,
-    aNewGenre: string,
+    aYear: number,
+    aGenres: string[],
     aDirector: string,
-    aDuration: string,
+    aDuration: number,
     aImg: URL
   ) {
     this.id = aId;
     this.name = aName;
     this.year = aYear;
-    this.newGenre = aNewGenre;
+    this.genres = aGenres;
     this.director = aDirector;
     this.duration = aDuration;
     this.img = aImg;

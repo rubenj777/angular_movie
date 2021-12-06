@@ -13,6 +13,11 @@ form #genre {
   display: flex;
 }
 
+form ul li {
+  justify-content: center;
+  list-style: none;
+}
+
 form input {
   margin: 5px;
   height: 25px;

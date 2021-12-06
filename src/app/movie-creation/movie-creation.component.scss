@@ -6,6 +6,12 @@ form {
   #genre {
     display: flex;
   }
+  ul {
+    li {
+      justify-content: center;
+      list-style: none;
+    }
+  }
   display: flex;
   flex-direction: column;
   width: 250px;

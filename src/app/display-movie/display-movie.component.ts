@@ -10,7 +10,6 @@ import { Movie } from '../models/movie';
 export class DisplayMovieComponent implements OnInit {
   @Input() public movie!: Movie;
   @Output() deleteMovie = new EventEmitter<void>();
-  @Output() editMovie = new EventEmitter<void>();
 
   constructor(private router: Router) {}
 
