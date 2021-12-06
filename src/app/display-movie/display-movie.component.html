@@ -1,17 +1,19 @@
 <div id="movie">
-  <div id="super ">
+  <div id="titleAndBtns">
     <h2>
       {{ movie.name }}
     </h2>
-    <button (click)="delete()">Delete</button>
-    <button (click)="edit()">Edit</button>
+    <div id="btns">
+      <button (click)="delete()">Delete</button>
+      <button (click)="edit()">Edit</button>
+    </div>
   </div>
 
   <div id="info">
     <img src="{{ movie.img }}" alt="movie poster" />
     <ul>
       <li>Year : {{ movie.year }}</li>
-      <p>Genres :</p>
+      <p>Genre(s) :</p>
       <ul id="genres">
         <li *ngFor="let g of movie.genres">{{ g }}</li>
       </ul>

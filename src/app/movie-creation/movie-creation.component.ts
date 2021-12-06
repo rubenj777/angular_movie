@@ -19,15 +19,18 @@ export class MovieCreationComponent implements OnInit {
   public image!: URL;
   public editMode = false;
   public editedMovie: Movie;
+  public id?: string;
 
   constructor(
     private singletonMovie: MovieService,
     private route: ActivatedRoute,
     private router: Router
   ) {
-    let id = route.snapshot.paramMap.get('id');
+    this.id = route.snapshot.paramMap.get('id') as string;
 
-    this.editedMovie = this.singletonMovie.tabMovie.find((f) => f.id === id)!;
+    this.editedMovie = this.singletonMovie.tabMovie.find(
+      (f) => f.id === this.id
+    )!;
 
     if (this.editedMovie) {
       this.name = this.editedMovie.name;

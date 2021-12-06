@@ -1,17 +1,28 @@
 #movie {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 450px;
-  height: 250px;
+  height: 225px;
   color: white;
   padding: 10px;
   margin: 10px;
   background-color: rgb(150, 150, 190);
   border-radius: 8px;
-  display: block;
-  #super {
+  #titleAndBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    #btns {
+      button {
+        margin-left: 5px;
+        width: 50px;
+        height: 25px;
+      }
+    }
     h2 {
-      display: inline;
       margin: 0;
+      width: 66%;
     }
     display: flex;
   }
@@ -33,11 +44,5 @@
         margin-top: 5px;
       }
     }
-  }
-
-  button {
-    margin-top: 10px;
-    width: 50px;
-    height: 25px;
   }
 }

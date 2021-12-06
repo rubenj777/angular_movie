@@ -12,7 +12,7 @@ export class MovieService {
       '1651',
       'Full Metal Jacket',
       1987,
-      ['War'],
+      ['War', 'Drama'],
       'Stanley Kubrick',
       116,
       new URL(

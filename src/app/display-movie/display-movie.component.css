@@ -1,22 +1,32 @@
 #movie {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 450px;
-  height: 250px;
+  height: 225px;
   color: white;
   padding: 10px;
   margin: 10px;
   background-color: #9696be;
   border-radius: 8px;
-  display: block;
 }
 
-#movie #super {
+#movie #titleAndBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   display: flex;
 }
 
-#movie #super h2 {
-  display: inline;
+#movie #titleAndBtns #btns button {
+  margin-left: 5px;
+  width: 50px;
+  height: 25px;
+}
+
+#movie #titleAndBtns h2 {
   margin: 0;
+  width: 66%;
 }
 
 #movie #info {
@@ -41,10 +51,4 @@
 
 #movie #info ul:not(#genres) li {
   margin-top: 5px;
-}
-
-#movie button {
-  margin-top: 10px;
-  width: 50px;
-  height: 25px;
 }
